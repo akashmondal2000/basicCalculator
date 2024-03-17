@@ -34,12 +34,16 @@ function multiplication() {
   const initialResult = currentResult
   currentResult = currentResult * enteredUserInput;
   createAndWriteOutput("*",initialResult,enteredUserInput);
+  logEntries.push(currentResult);
+  console.log("User Input Entries =>", logEntries);
 }
 function division() {
   const enteredUserInput = userInputNumber();
   const initialResult = currentResult;
   currentResult = currentResult / enteredUserInput;
   createAndWriteOutput("/",initialResult,enteredUserInput)
+  logEntries.push(currentResult);
+  console.log("User Input Entries =>", logEntries);
 }
 
 addBtn.addEventListener("click", add);
